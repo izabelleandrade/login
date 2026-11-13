@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sistema Financeiro do Porto do Itaqui</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="pagina">
+    <section class="apresentacao">
+      <div class="marca">
+        <img src="img/logo.png" alt="Logotipo do Porto do Itaqui">
+        <span>PORTO DO<strong>ITAQUI</strong></span>
+      </div>
+      <h1>Sistema Financeiro<br>do Porto do Itaqui</h1>
+      <p>Acesse sua conta para continuar com suas operações financeiras.</p>
+    </section>
+
+    <section class="cartao" aria-labelledby="titulo-login"> 
+      <h2 id="titulo-login">Acesse sua conta</h2>
+
+      <form id="form-login" novalidate>
+        <label for="usuario">Usuário</label>
+        <div class="campo">
+          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+          <input id="usuario" name="usuario" type="text" placeholder="Digite seu usuário" autocomplete="username" required>
+        </div>
+
+        <label for="senha">Senha</label>
+        <div class="campo">
+          <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.2" fill="currentColor"/></svg>
+          <input id="senha" name="senha" type="password" placeholder="Digite sua senha" autocomplete="current-password" required>
+          <button type="button" class="olho" id="alternar-senha" aria-label="Mostrar senha" aria-pressed="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path id="risco" d="M3 3l18 18"/></svg>
+          </button>
+        </div>
+
+        <div class="linha">
+          <label class="lembrar"><input type="checkbox" id="lembrar" name="lembrar"> Lembrar-me</label>
+          <a class="esqueceu" href="#">Esqueceu sua senha?</a>
+        </div>
+
+        <button class="entrar" type="submit">Entrar</button>
+        <p class="erro" id="erro" role="alert">Informe o usuário e a senha para continuar.</p>
+      </form>
+
+      <p class="termos">Ao clicar em "Entrar", você concorda com os <a href="#">Termos de Serviço</a> e <a href="#">Política de Privacidade</a></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
